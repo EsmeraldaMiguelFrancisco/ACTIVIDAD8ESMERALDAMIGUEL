@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+    <script src="LOOPS 1.JS">
+      const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+      const list = document.createElement('ul');
+
+      // Recorre el array y crea un elemento <li> por cada elemento
+      myArray.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item; // Establece el contenido de texto del elemento <li>
+        list.appendChild(listItem); // Agrega el elemento <li> a la lista <ul>
+      });
+
+      // Agrega la lista al elemento con la clase 'preview'
+      const section = document.querySelector('section.preview');
+      section.appendChild(list);
+    </script>
+
+  </body>
+</html>
